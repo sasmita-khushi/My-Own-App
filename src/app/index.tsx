@@ -48,9 +48,11 @@ export default function homePage() {
           <MenuIcon name="settings-outline" size={26} className="ml-3" />
         </View>
       </View>
-      <Link href="./a">Go to hello page</Link>
-      <Link href="./b">Go to circle page</Link>
-      <Link href="./c">Go to rectangle page</Link>
+      <Link href="./anime-prop">Go to hello page</Link>
+      <Link href="./circle">Go to circle page</Link>
+      <Link href="./rotate">Go to rotate page</Link>
+      <Link href="./my-text">Go to my-text page</Link>
+      <Link href="./shake">Go to shake page</Link>
     </View>
   );
 }
