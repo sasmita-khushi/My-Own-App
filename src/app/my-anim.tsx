@@ -1,10 +1,11 @@
-import generateUniqueColor from "utility/color-box";
+import generateUniqueColor from "../../utility/color-box";
 import { useEffect } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import Animated, {
   useAnimatedStyle,
   useSharedValue,
   withTiming,
+  runOnUI,
 } from "react-native-reanimated";
 
 export default function Index() {
@@ -29,9 +30,9 @@ export default function Index() {
 function SlidingWords(props: { words: string[] }) {
   const SLIDE_POSITION = (props.words.length + props.words.length - 1) * -50; // Initial position for sliding panel
   const colors = generateUniqueColor(props.words.length);
-  console.log("colors", colors);
+  //console.log("colors", colors);
   const sv = useSharedValue(SLIDE_POSITION);
-  console.log("sv", sv.value);
+  //console.log("sv", sv.value);
   const animStyle = useAnimatedStyle(() => {
     return {
       top: sv.value,
@@ -40,11 +41,14 @@ function SlidingWords(props: { words: string[] }) {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      if (sv.value === 50) {
-        sv.value = SLIDE_POSITION; // Reset to initial position
-      }
-      sv.value = withTiming(sv.value + 100, { duration: 300 });
+      runOnUI(() => {
+        if (sv.value === 50) {
+          sv.value = SLIDE_POSITION;
+        }
+        sv.value = withTiming(sv.value + 100, { duration: 300 });
+      })();
     }, 1000);
+
     return () => clearInterval(interval);
   }, []);
   return (
@@ -135,7 +139,7 @@ const styles = StyleSheet.create({
     padding: 5,
     paddingLeft: 10,
     paddingRight: 10,
-    zIndex: -1,
+    zIndex: 1,
   },
   slidePanel: {
     position: "absolute",

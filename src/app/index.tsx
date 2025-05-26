@@ -13,6 +13,13 @@ import Ionicons from "@expo/vector-icons/Ionicons";
 export type IconName = keyof typeof Ionicons.glyphMap;
 
 export default function homePage() {
+  //   return (
+  //     <View className="flex-1 justify-center items-center">
+  //       <Text>Hello!</Text>
+  //       <Link href="./tutorial/tap">Go to Tap PAge</Link>
+  //     </View>
+  //   );
+  // }
   const [gretting, setGretting] = useState("");
 
   useEffect(() => {
@@ -48,11 +55,34 @@ export default function homePage() {
           <MenuIcon name="settings-outline" size={26} className="ml-3" />
         </View>
       </View>
-      <Link href="./anime-prop">Go to hello page</Link>
-      <Link href="./circle">Go to circle page</Link>
-      <Link href="./rotate">Go to rotate page</Link>
-      <Link href="./my-text">Go to my-text page</Link>
-      <Link href="./shake">Go to shake page</Link>
+      <View></View>
+      <Link href="./anime-prop">
+        <Text>Go to hello page</Text>
+      </Link>
+      <Link href="./circle">
+        <Text>Go to hello page</Text>
+      </Link>
+      <Link href="./rotate">
+        <Text>Go to rotate page</Text>
+      </Link>
+      <Link href="./my-text">
+        <Text>Go to my-text page</Text>
+      </Link>
+      <Link href="./shake">
+        <Text>Go to shake page</Text>
+      </Link>
+      <Link href="./tutorial/tap">
+        <Text>Go to tap page</Text>
+      </Link>
+      <Link href="./my-anim">
+        <Text>Go to My Animation pag</Text>e
+      </Link>
+      <Link href="./tutorial/pan-gesture">
+        <Text>Go to Pan Gesture page</Text>
+      </Link>
+      <Link href="./tutorial/spatial">
+        <Text>Go to spatial page</Text>
+      </Link>
     </View>
   );
 }
