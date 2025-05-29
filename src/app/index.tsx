@@ -55,9 +55,9 @@ export default function homePage() {
           <MenuIcon name="settings-outline" size={26} className="ml-3" />
         </View>
       </View>
-      <View></View>
+
       <Link href="./anime-prop">
-        <Text>Go to hello page</Text>
+        <Text>Go to prop page</Text>
       </Link>
       <Link href="./circle">
         <Text>Go to hello page</Text>
@@ -82,6 +82,18 @@ export default function homePage() {
       </Link>
       <Link href="./tutorial/spatial">
         <Text>Go to spatial page</Text>
+      </Link>
+      <Link href="./tutorial/slide">
+        <Text>Go to slide page</Text>
+      </Link>
+      <Link href="./tutorial/pop-circle">
+        <Text>Go to Pop Circle Page</Text>
+      </Link>
+      <Link href="./tutorial/pop-circle-react">
+        <Text>Go to Pop Circle React Page</Text>
+      </Link>
+      <Link href="./tutorial/pressable-circle">
+        <Text>Go to Pressable Circle Page</Text>
       </Link>
     </View>
   );
