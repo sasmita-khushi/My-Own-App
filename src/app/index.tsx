@@ -95,6 +95,15 @@ export default function homePage() {
       <Link href="./tutorial/pressable-circle">
         <Text>Go to Pressable Circle Page</Text>
       </Link>
+      <Link href="./tutorial/flip-card">
+        <Text>Go to Flip-Card Page</Text>
+      </Link>
+      <Link href="./tutorial/spiral">
+        <Text>Go to Spiral Page</Text>
+      </Link>
+      <Link href="./tutorial/layout-anime">
+        <Text>Go to Layout Animation Page</Text>
+      </Link>
     </View>
   );
 }
