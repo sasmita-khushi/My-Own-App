@@ -104,6 +104,9 @@ export default function homePage() {
       <Link href="./tutorial/layout-anime">
         <Text>Go to Layout Animation Page</Text>
       </Link>
+      <Link href="./check-box-page">
+        <Text>Go to Check Box page</Text>
+      </Link>
     </View>
   );
 }
